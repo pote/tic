@@ -6,7 +6,7 @@ It's based on the behavior described in [this blogpost by Medium](https://blog.m
 
 ## Criteria
 
-For text, we calculate 275 words per minute, then we add 3 seconds per image, with a few extra bonus seconds for the first few images as described in the medium blog post
+For text, we calculate 180 words per minute, then we add 3 seconds per image, with a few extra bonus seconds for the first few images as described in the medium blog post
 
 ## Usage
 
@@ -17,7 +17,7 @@ For text, we calculate 275 words per minute, then we add 3 seconds per image, wi
   </section>
 
   <script>
-    var tic = new Tic("estimated-read-time", "content");
-    tic.estimate()
+    let ert = document.getElementById("estimated-read-time")
+    ert.textContent = Tic(document.getElementById("content"));
   </script>
 ```
